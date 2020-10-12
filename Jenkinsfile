@@ -58,7 +58,7 @@ pipeline {
         
         success {
           
-          archiveArtifacts "${env.BUILD_ID}/src/app "
+          archiveArtifacts "${env.BUILD_ID}/app "
           sh "docker run --rm -v ${vVOL} ${IMG}  'rm -rf build dist'"
         
         }
