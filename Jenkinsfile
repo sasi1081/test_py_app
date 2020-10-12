@@ -24,7 +24,7 @@ pipeline {
       }
       steps{
         sh 'py.test --verbose --junit-xml test-result/result.xml  test_flask.py'
-        sh ' flake8 --statistics app.py test_flask.py --output-file flake.out'
+        sh ' flake8 --statistics app.py test_flask.py --output-file flake.result'
 
       }
       
