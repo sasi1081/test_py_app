@@ -1,11 +1,11 @@
 pipeline {
   agent { docker { image 'python:3.7.2' } }
   stages {
-   /* stage('SCM') {
+    stage('SCM') {
       steps {
        git 'https://github.com/sasi1081/test_py_app.git'
       }
-    }*/
+    }
 
       stage('build') {
         steps {
@@ -16,7 +16,7 @@ pipeline {
           }
         }
       }
-/*    stage('test') {
+   stage('test') {
       agent {
         docker {
          image 'qnib/pytest'
@@ -33,7 +33,7 @@ pipeline {
           junit 'test-result/result.xml'
         }
   }
-} */
+} 
     stage('Final') {
       
       agent any 
